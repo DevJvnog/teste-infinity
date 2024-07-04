@@ -1,0 +1,81 @@
+body {
+    font-family: Montserrat;
+    background-image: url(./background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container {
+    height: 100%;
+    padding: 0 50px;
+    border-radius: 0px 50px 0px 0px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.055);
+    width: 50%;
+    text-align: center;
+    margin-left: 50%;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    
+}
+
+.container h2{
+    color: #ffffff;
+    font-weight: bold;
+}
+.container p{
+    color: #ffffff;
+}
+#login-form,#role-selection,#register-form-empresa,#register-form-motorista{
+    display: block;
+    margin-top: 100px;
+}
+
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #79AC52;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #80be4f;
+}
+
+a {
+    color: #79AC52;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #80be4f;;
+}
+
+img {
+    margin-top: 10px;
+    width: 160px;
+    height: 160px;
+    border-radius: 5px;
+}

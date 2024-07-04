@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorista Infinity Fretes</title>
+    <link rel="stylesheet" href="motoristastyle.css">
+    <link rel="shortcut icon" href="https://infinitybrasil.net/img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <h1>Bem-Vindo, <span id="perfilNome"></span>!</h1>  
+        </div>
+        <div class="navbarButton">
+            <button id="perfilBtn"> <i class="fa fa-user"></i> Perfil</button>
+            <button id="fretesBtn"> <i class="fa fa-truck"></i> Fretes</button>
+            <button id="logoutBtn"> <i class="fa-solid fa-right-from-bracket"></i> Sair</button>
+        </div>
+    </nav>
+
+    <div id="fretesContainer" class="container">
+        <h2>Fretes Disponíveis</h2>
+        <table id="fretesDisponiveis">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Veículo</th>
+                    <th>Distância</th>
+                    <th>Valor do Frete</th>
+                    <th>Taxa</th>
+                    <th>Total a Receber</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fretes disponíveis serão adicionados aqui -->
+            </tbody>
+        </table>
+
+        <h2>Fretes Aceitos</h2>
+        <table id="fretesAceitos">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Veículo</th>
+                    <th>Rota</th>
+                    <th>Distância</th>
+                    <th>Valor do Frete</th>
+                    <th>Taxa</th>
+                    <th>Total a Receber</th>
+                    <th>Ver Rota</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fretes aceitos serão adicionados aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="perfilContainer" class="container" style="display:none;">
+        <h2>Perfil do Motorista</h2>
+        <img id="motoristaFoto" src="" alt="Foto do Motorista">
+        <p><strong>Email:</strong> <span id="perfilEmail"></span></p>
+        <p><strong>Veículo:</strong> <span id="perfilVeiculo"></span></p>
+    </div>
+
+    <script src="motoristascript.js"></script>
+</body>
+</html>

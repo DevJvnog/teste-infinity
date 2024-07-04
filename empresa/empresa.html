@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresas Infinity Fretes</title>
+    <link rel="stylesheet" href="empresastyle.css">
+    <link rel="shortcut icon" href="https://infinitybrasil.net/img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <h1>Bem-Vindo, <span id="perfilNome"></span>!</h1>  
+        </div>
+        <div class="navbarButton">
+            <button id="perfilBtn"> <i class="fa fa-user"></i> Perfil</button>
+            <button id="fretesBtn"> <i class="fa fa-truck"></i> Fretes</button>
+            <button id="logoutBtn"> <i class="fa-solid fa-right-from-bracket"></i> Sair</button>
+        </div>
+    </nav>
+    <div id="fretesContainer" class="container">
+        <h2>Postar Frete</h2>
+        <form id="frete-form">
+            <label for="produto">Produto a ser transportado:</label>
+            <input type="text" id="produto" name="produto">
+            
+            <label for="veiculo">Veículo necessário para transporte:</label>
+            <select id="veiculo" name="veiculo">
+                <option value="caminhonete">Caminhonete</option>
+                <option value="furgao">Furgão</option>
+                <option value="caminhao">Caminhão</option>
+            </select>
+
+            <label for="origem">De:</label>
+            <select id="origem" required>
+                <option value="">Selecione a Cidade de Origem</option>
+                <option value="Uberlândia">Uberlândia</option>
+                <option value="Araguari">Araguari</option>
+                <option value="Indianópolis">Indianópolis</option>
+                <option value="Monte Alegre">Monte Alegre</option>
+                <option value="Goiânia">Goiânia</</option>
+                <option value="Uberaba">Uberaba</option>
+                <option value="São Paulo">São Paulo</option>
+            </select>
+            
+            <label for="destino">Para:</label>
+            <select id="destino" required>
+                <option value="">Selecione a Cidade de Destino</option>
+                <option value="Uberlândia">Uberlândia</option>
+                <option value="Araguari">Araguari</option>
+                <option value="Indianópolis">Indianópolis</option>
+                <option value="Monte Alegre">Monte Alegre</option>
+                <option value="Goiânia">Goiânia</option>
+                <option value="Uberaba">Uberaba</option>
+                <option value="São Paulo">São Paulo</option>
+            </select>
+
+            <label for="distancia">Distância:</label>
+            <input type="text" id="distancia" name="distancia" disabled>
+            
+            <label for="valorFrete">Valor do Frete:</label>
+            <input type="text" id="valorFrete" name="valorFrete" disabled>
+            
+            <label for="taxa">Taxa:</label>
+            <input type="text" id="taxa" name="taxa" disabled>
+            
+            <label for="totalReceber">Total da Operação:</label>
+            <input type="text" id="totalReceber" name="totalReceber" disabled>
+
+            <button type="button" onclick="postarFrete()">Postar Frete</button>
+        </form>
+
+        <h2>Fretes Postados</h2>
+        <table id="fretesPostados">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Veículo</th>
+                    <th>Rota</th>
+                    <th>Distância</th>
+                    <th>Valor do Frete</th>
+                    <th>Taxa</th>
+                    <th>Total da Operação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fretes postados serão adicionados aqui -->
+            </tbody>
+        </table>
+
+        <h2>Painel da Empresa</h2>
+        <div id="tabelaMotoristas">
+            <h2>Motoristas que Aceitaram Fretes</h2>
+            <table id="tabelaAceitamentos">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Foto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dados dos motoristas serão adicionados aqui -->
+                </tbody>
+            </table>
+        </div>
+        <h2>Detalhes dos Fretes Aceitos</h2>
+<table id="detalhesFretesAceitos">
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Destino</th>
+            <th>Distância</th>
+            <th>Valor do Frete</th>
+            <th>Taxa</th>
+            <th>Total da Operação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Detalhes dos fretes aceitos serão adicionados aqui -->
+    </tbody>
+</table>
+
+    </div>
+    <div id="perfilContainer" class="container" style="display:none;">
+        <h2>Perfil da Empresa</h2>
+        <p><strong>Email:</strong> <span id="perfilEmail"></span></p>
+    </div>
+    <script src="empresacript.js"></script>
+</body>
+</html>

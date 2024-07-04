@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Fretes</title>
+    <link rel="shortcut icon" href="https://infinitybrasil.net/img/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="login-form">
+            <h2>Login</h2>
+            <form>
+                <input type="email" id="login-email" placeholder="E-mail" required>
+                <input type="password" id="login-password" placeholder="Senha" required>
+                <button type="button" onclick="login()">Login</button>
+                <p>Não tem uma conta? <a href="#" onclick="showRoleSelection()">Cadastre-se aqui</a></p>
+            </form>
+        </div>
+        
+        <div id="role-selection" style="display: none;">
+            <h2>Deseja se cadastrar como?</h2>
+            <button type="button" onclick="showRegisterForm('empresa')">Empresa</button>
+            <button type="button" onclick="showRegisterForm('motorista')">Motorista</button>
+            <p>Já tem uma conta? <a href="#" onclick="toggleForms()">Faça login aqui</a></p>
+        </div>
+
+        <div id="register-form-empresa" style="display: none;">
+            <h2>Cadastro Empresa</h2>
+            <form>
+                <input type="text" id="empresa-nome" placeholder="Nome da Empresa" required>
+                <input type="email" id="empresa-email" placeholder="E-mail" required>
+                <input type="password" id="empresa-password" placeholder="Senha" required>
+                <button type="button" onclick="registerEmpresa()">Cadastrar</button>
+                <p>Já tem uma conta? <a href="#" onclick="toggleForms()">Faça login aqui</a></p>
+            </form>
+        </div>
+
+        <div id="register-form-motorista" style="display: none;">
+            <h2>Cadastro Motorista</h2>
+            <form>
+                <input type="text" id="motorista-nome" placeholder="Nome" required>
+                <input type="email" id="motorista-email" placeholder="E-mail" required>
+                <input type="password" id="motorista-password" placeholder="Senha" required>
+                <select id="motorista-veiculo" required>
+                    <option value="">Selecione o Tipo de Veículo</option>
+                    <option value="caminhonete">Caminhonete</option>
+                    <option value="furgao">Furgão</option>
+                    <option value="caminhao">Caminhão</option>
+                </select>
+                <input type="file" id="motorista-foto" accept="image/*" required onchange="previewFoto(event)">
+                <img id="foto-preview" src="" alt="Preview" style="display:none; width:160px; height:160px; border-radius:5px; margin-top:10px;">
+                <button type="button" onclick="registerMotorista()">Cadastrar</button>
+                <p>Já tem uma conta? <a href="#" onclick="toggleForms()">Faça login aqui</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
